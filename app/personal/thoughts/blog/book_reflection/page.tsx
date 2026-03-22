@@ -1,18 +1,12 @@
-import BlogLayout from "../../../../components/BlogLayout";
+import BlogLayout, { ContentBlock } from "../../../../components/BlogLayout";
 
 export default function BlogPost() {
 
-  const content = [
+  const content: ContentBlock[] = [
     {
       type: "paragraph",
       text: "Have you ever noticed how certain books seem to speak directly to your personal dilemmas or situations? I often find myself reaching for a book that resonates with my current struggles or questions. Is this merely a coincidence, or do I have an unusually insightful collection of books? I don’t think so. After some reflection, I believe this reveals the true beauty of books: their openness to interpretation."
     },
-
-    // {
-    //   type: "image",
-    //   src: "/dreams.jpg",
-    //   caption: "Dreams feel bigger when we’re younger"
-    // },
 
     {
       type: "paragraph",
@@ -54,7 +48,6 @@ export default function BlogPost() {
       src: "/blog_4_1.png",
       caption: ""
     }
-
   ];
 
   return (

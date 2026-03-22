@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-type ContentBlock =
+export type ContentBlock =
   | { type: "paragraph"; text: string }
   | { type: "heading"; text: string }
   | { type: "quote"; text: string }
@@ -33,6 +33,7 @@ export default function BlogLayout({
       {/* Content */}
       <article className="space-y-6 text-gray-700 leading-relaxed text-lg">
         {content.map((block, index) => {
+
           if (block.type === "paragraph") {
             return <p key={index}>{block.text}</p>;
           }
