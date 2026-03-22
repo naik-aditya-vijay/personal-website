@@ -65,36 +65,30 @@ export default function Home() {
           </p>
 
           <p className="text-gray-500">
-            I'd love to connect with you to get to know you and your life,
-            work, ideas, passions, aspirations, or share these things about
-            myself if you are interested to listen.
+            I’d love to connect - whether it’s to learn about your life, work, ideas, passions, and aspirations, 
+            or to share mine if you’re curious to listen.
           </p>
 
           <p className="text-gray-500">
-            Born in India, currently residing in the US. Trying to make the
-            juice worth the squeeze (iykyk).
+            Born in India and currently based in the US, I’m trying to make the juice worth the squeeze (iykyk).
           </p>
 
           <p className="text-gray-500">
-            Professionally, I am a Senior Business Analyst at one of the largest
-            not-for-profit health insurance companies in the US. I get to work
-            with amazing people on amazing projects with amazing challenges.
+            Professionally, I work as a Senior Business Analyst at one of the largest not-for-profit health insurance companies 
+            in the US, where I get to collaborate with great people on complex and meaningful challenges.
           </p>
 
           <p className="text-gray-500">
-            Academically, I am pursuing a Doctorate in Business Administration
-            with a Master's in Business Analytics (University of Rochester, 2022)
-            and Bachelor's in Computer Science (Symbiosis International University, 2018).
+            Academically, I’m pursuing a Doctorate in Business Administration (National Louis University), 
+            alongside a Master’s in Business Analytics (University of Rochester, 2022) and a Bachelor’s in Computer Science (Symbiosis International University, 2018).
           </p>
 
           <p className="text-gray-500">
-            Personally, I have three interests — meeting people, overthinking,
-            and sports.
+            Personally, I’m driven by three things — meeting people, sports and overthinking.
           </p>
 
           <p className="text-gray-500">
-            If this introduction interests you, I invite you to spend some more
-            time on this website or hit me up and we can connect.
+            If this resonates with you, feel free to explore the site or reach out — I’d enjoy connecting.
           </p>
 
         </motion.div>
