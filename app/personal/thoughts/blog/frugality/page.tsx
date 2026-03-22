@@ -1,8 +1,9 @@
-import BlogLayout from "../../../../components/BlogLayout";
+import BlogLayout, { ContentBlock } from "../../../../components/BlogLayout";
 
 export default function BlogPost() {
 
-  const content = [
+  // Explicitly type content as ContentBlock[]
+  const content: ContentBlock[] = [
     {
       type: "paragraph",
       text: "When we transition into adulthood, we often start imposing limitations on our dreams. I remember my younger self with, what my adult self would call, bizarre dreams: owning a real estate empire, having helicopters to save commute time, and leading hundreds of people. Okay, let’s be honest, thousands! These dreams felt real, unlike the whimsical childhood dreams of becoming an astronaut or the President. There was so much clarity in my thoughts and conviction in my speech. It felt as if these dreams were just an age milestone away, like getting a driver’s license at 18."

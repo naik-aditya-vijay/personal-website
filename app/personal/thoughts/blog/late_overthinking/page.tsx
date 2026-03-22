@@ -1,8 +1,9 @@
-import BlogLayout from "../../../../components/BlogLayout";
+import BlogLayout, { ContentBlock } from "../../../../components/BlogLayout";
 
 export default function BlogPost() {
 
-  const content = [
+  // Explicitly type content as ContentBlock[]
+  const content: ContentBlock[] = [
     {
       type: "paragraph",
       text: "Do we sometimes complicate life more than necessary? Actually, let me rephrase — do we complicate life, or does life just sit back and watch us do it to ourselves for entertainment?"
@@ -77,16 +78,6 @@ export default function BlogPost() {
       type: "paragraph",
       text: "And most importantly — maybe it’s time to believe we’re lucky. Because maybe, just maybe, we actually are."
     }
-    // {
-    //   type: "quote",
-    //   text: "The harder I work, the luckier I become. — Ray Kroc"
-    // },
-
-
-    // {
-    //   type: "heading",
-    //   text: "The Shift"
-    // },
   ];
 
   return (
