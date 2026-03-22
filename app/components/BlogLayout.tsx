@@ -1,6 +1,22 @@
 import Image from "next/image";
 
-export default function BlogLayout({ title, author, content }) {
+type ContentBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "heading"; text: string }
+  | { type: "quote"; text: string }
+  | { type: "image"; src: string; alt?: string; caption?: string };
+
+type BlogLayoutProps = {
+  title: string;
+  author: string;
+  content: ContentBlock[];
+};
+
+export default function BlogLayout({
+  title,
+  author,
+  content,
+}: BlogLayoutProps) {
   return (
     <main className="min-h-screen px-6 py-20 max-w-3xl mx-auto">
 
@@ -10,9 +26,9 @@ export default function BlogLayout({ title, author, content }) {
       </h1>
 
       {/* Author */}
-      { <p className="text-gray-500 mb-12">
-        Published on {author}
-      </p> }
+      <p className="text-gray-500 mb-12">
+        Published by {author}
+      </p>
 
       {/* Content */}
       <article className="space-y-6 text-gray-700 leading-relaxed text-lg">
