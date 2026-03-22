@@ -12,6 +12,7 @@ type BlogLayoutProps = {
   content: ContentBlock[];
 };
 
+// Fix: type the destructured props
 export default function BlogLayout({
   title,
   author,
@@ -33,7 +34,6 @@ export default function BlogLayout({
       {/* Content */}
       <article className="space-y-6 text-gray-700 leading-relaxed text-lg">
         {content.map((block, index) => {
-
           if (block.type === "paragraph") {
             return <p key={index}>{block.text}</p>;
           }
