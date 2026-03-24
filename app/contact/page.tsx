@@ -1,43 +1,93 @@
-"use client";
-
-import Link from "next/link";
-
-export default function UnderConstruction() {
+export default function ContactPage() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-6 text-center">
-
-      {/* Animated Icon */}
-      <div className="text-6xl mb-6 animate-bounce">
-        🚧
-      </div>
-
+    <div className="max-w-3xl mx-auto px-6 py-16">
+      
       {/* Title */}
-      <h1 className="text-4xl font-bold mb-4">
-        Under Construction
-      </h1>
+      <h1 className="text-4xl font-bold mb-4">Contact Me</h1>
 
-      {/* Subtitle */}
-      <p className="text-gray-600 max-w-md mb-8">
-        I'm currently building something meaningful here.  
-        Check back soon — it’ll be worth it.
+      {/* Intro */}
+      <p className="text-lg text-gray-600 mb-10">
+        I enjoy conversations that go beyond surface level.
       </p>
 
-      {/* Subtle Divider */}
-      <div className="w-16 h-[2px] bg-gray-300 mb-8" />
-
-      {/* Optional Thought (on-brand for you) */}
-      <p className="text-sm text-gray-500 italic mb-10">
-        “Good things take time — great things take intention.”
-      </p>
-
-      {/* Back Button */}
-      <Link
-        href="/"
-        className="px-6 py-3 rounded-lg bg-black text-white hover:bg-gray-800 transition"
+      {/* Form */}
+      <form
+        action="https://formspree.io/f/xvzweqwq"
+        method="POST"
+        className="space-y-6"
       >
-        Back to Home
-      </Link>
+        <div>
+          <label className="block text-sm font-medium mb-2">Name</label>
+          <input
+            type="text"
+            name="name"
+            required
+            className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
 
-    </main>
+        <div>
+          <label className="block text-sm font-medium mb-2">Email</label>
+          <input
+            type="email"
+            name="email"
+            required
+            className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium mb-2">Message</label>
+          <textarea
+            name="message"
+            rows={5}
+            required
+            className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          className="bg-black text-white px-6 py-3 rounded-xl hover:opacity-90 transition"
+        >
+          Send Message
+        </button>
+      </form>
+
+      {/* Divider */}
+      <div className="my-12 border-t"></div>
+
+      {/* Alternate Contact */}
+      <div className="space-y-3 text-gray-700">
+        <p>
+          Prefer reaching out directly?
+        </p>
+
+        <p>
+          📧 Email: <a href="mailto:naikadityavijay@gmail.com" className="underline">naikadityavijay@gmail.com</a>
+        </p>
+
+        <p>
+          💼 LinkedIn:{" "}
+          <a
+            href="https://linkedin.com/in/itsadityanaik"
+            target="_blank"
+            className="underline"
+          >
+            linkedin.com/in/itsadityanaik
+          </a>
+        </p>
+        <p>
+          ✍️ Medium:{" "}
+          <a
+            href="https://medium.com/@YOUR_USERNAME"
+            target="_blank"
+            className="underline"
+          >
+            https://medium.com/@talksnspeaks
+    </a>
+  </p>
+      </div>
+    </div>
   );
 }
