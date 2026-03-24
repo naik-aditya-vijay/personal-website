@@ -22,12 +22,26 @@ export default function Thoughts() {
       link: "/personal/thoughts/blog/diactonomy"
     },
     {
+      type: "Quote",
+      tag: "Quote",
+      title: "Expectancy determines outcomes!",
+      description:
+        ""
+    },
+    {
       type: "Blog",
       tag: "Blog",
       title: "It's late, I'm overthinking, and here we are!",
       description:
         "",
       link: "/personal/thoughts/blog/late_overthinking"
+    },
+    {
+      type: "Quote",
+      tag: "Quote",
+      title: "The magic you are looking for is in the work you are avoiding.",
+      description:
+        ""
     },
     {
       type: "Blog",
@@ -40,9 +54,9 @@ export default function Thoughts() {
     {
       type: "Quote",
       tag: "Quote",
-      title: "Ray Kroc",
+      title: "The harder I work, the luckier I get!",
       description:
-        "“The harder I work, the luckier I get!”"
+        "Ray Kroc"
     },
     {
       type: "Article",
@@ -53,6 +67,13 @@ export default function Thoughts() {
       link: "https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/learning-center/Idenitfying-Chart-Patterns.pdf"
     },
     {
+      type: "Quote",
+      tag: "Quote",
+      title: "The secret to success is found in daily routine.",
+      description:
+        ""
+    },
+    {
       type: "Video",
       tag: "Video",
       title: "Naval Ravikant on Wealth Creation",
@@ -60,6 +81,27 @@ export default function Thoughts() {
         "A talk about building wealth and thinking long-term.",
       link: "https://www.youtube.com/watch?v=6Mya4C3Yr7I"
     },
+    {
+      type: "Quote",
+      tag: "Quote",
+      title: "The antidote for overthinking is overdoing!",
+      description:
+        ""
+    },
+    {
+      type: "Quote",
+      tag: "Quote",
+      title: "Motivation without actions brings self delusion.",
+      description:
+        ""
+    },
+    {
+      type: "Quote",
+      tag: "Quote",
+      title: "Success is not something you pursue. What you pursue will elude you. Success is something you attract by the person you become.",
+      description:
+        ""
+    }
     // {
     //   type: "Idea",
     //   tag: "Idea",
