@@ -68,7 +68,7 @@ export default function Navbar() {
 
         {/* Resume Button */}
         <a
-          href="/resume.pdf"
+          href="/avn_resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center px-5 py-2.5 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-900 hover:scale-105 transition"
