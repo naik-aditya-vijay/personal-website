@@ -61,7 +61,14 @@ export default function Photos() {
     { src: "/photo49.jpg", caption: "" },
     { src: "/photo50.jpg", caption: "" },
     { src: "/photo51.jpg", caption: "" },
-    { src: "/photo52.jpg", caption: "" }
+    { src: "/photo52.jpg", caption: "" },
+
+    { src: "/photo53.jpg", caption: "" },
+    { src: "/photo54.jpg", caption: "" },
+    { src: "/photo55.jpg", caption: "" },
+    { src: "/photo56.jpg", caption: "" },
+    { src: "/photo57.jpg", caption: "" },
+    { src: "/photo58.jpg", caption: "" },
   ];
 
   return (
