@@ -45,7 +45,7 @@ export default function Work() {
       logo: "/symbi_logo.png",
       period: "August 2014 - May 2018",
       description:
-        "",
+        "My Bachelor's in Computer Science gave me the technical foundation that underpins everything I do today — from data engineering and programming to systems thinking and problem-solving",
       skills: [
         "Computer Science",
         "Computer Networking",
@@ -53,7 +53,7 @@ export default function Work() {
         "Common Sense"
       ],
       takeaway:
-        ""
+        "A technical grounding in Computer Science that made every analytics and strategy challenge that followed feel like home."
     },
     {
       role: "Diploma in Business Analytics",
@@ -61,7 +61,7 @@ export default function Work() {
       logo: "/symbi_logo.png",
       period: "May 2015 - May 2017",
       description:
-        "",
+        "While completing my Bachelor's in Computer Science, I pursued a part-time Diploma in Business Management - a deliberate early step toward bridging the gap between technology and business. Even then, I had a clear long-term vision: to move beyond building systems and toward shaping the decisions behind them.",
       skills: [
         "Business Management",
         "Communication",
@@ -69,7 +69,7 @@ export default function Work() {
         "Finance"
       ],
       takeaway:
-        ""
+        "Where the tech-meets-business story began."
     }
   ];
 
@@ -128,6 +128,18 @@ export default function Work() {
 
         <span className="px-4 py-2 bg-gray-100 rounded-full">
           Business Administration
+        </span>
+
+        <span className="px-4 py-2 bg-gray-100 rounded-full">
+          Bachelor of Technology
+        </span>
+
+        <span className="px-4 py-2 bg-gray-100 rounded-full">
+          Master of Science
+        </span>
+
+        <span className="px-4 py-2 bg-gray-100 rounded-full">
+          Doctorate of Business Administration
         </span>
 
       </div>

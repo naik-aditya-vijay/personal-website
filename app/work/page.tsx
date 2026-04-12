@@ -11,7 +11,7 @@ export default function Work() {
       logo: "/floridablue_logo.jpg",
       period: "Aug 2024 — Present",
       description:
-        "Working in the value-based commercial analytics department with a blend of monthly processes and ad-hoc projects. Monthly responsibilities include building datasets that serve as the source of truth for the commercial organization, maintaining dashboards to visualize data and trends, and running quality checks and testing. Ad-hoc project scope covers anything that requires leveraging data - from investigating inconsistent claims for a member and managing performance for provider groups, to tracking trends and supplying data for marketing initiatives.",
+        "I sit at the intersection of data infrastructure and strategic decision-making within the value-based commercial analytics function, supporting leaders across Provider Analytics, Sales, Clinical, and Marketing with the insights they need to act with confidence. My work spans two dimensions: building reliable foundations and solving complex problems. On the foundation side, I own the datasets that serve as the commercial organization's source of truth, maintain dashboards used by executives and cross-functional teams, and enforce data quality standards that stakeholders depend on daily. On the strategic side, I take on high-ambiguity, high-stakes projects - from untangling inconsistent claims at the member level and managing performance analytics for provider groups, to identifying trends that shape marketing and commercial strategy. I collaborate on cross-functional projects, translating data into narratives that drive decisions at the leadership level.",
       skills: [
         "Healthcare Analytics",
         "Stakeholder Communication",
@@ -20,7 +20,24 @@ export default function Work() {
         "Data Analysis"
       ],
       takeaway:
-        "Using data to leverage decision-making; ad-hoc projects allow working with new data, with new challenges, and new stakeholders."
+        "Turning complex health data into decisions."
+    },
+    {
+      role: "Founder & Chair",
+      company: "Youth Organization for Underpriviledged, Needful and Gifted (YOUNG) Foundation",
+      logo: "/young.png",
+      period: "December 2019 — Present",
+      description:
+        "Founded the YOUNG Foundation with a mission centered on Education & Skill Development, Healthcare Awareness, and Social Impact. I wear every hat: organizing events, managing finances, expanding our volunteer network, and identifying new ways to serve community. Building something meaningful with limited resources has sharpened my ability to prioritize, lead with purpose, and create impact where it matters most.",
+      skills: [
+        "Community Service",
+        "Innate Satisfaction",
+        "Empathy & Compassion",
+        "Leadership",
+        "Team Collaboration"
+      ],
+      takeaway:
+        "A sense of purpose."
     },
     {
       role: "Pricing Analytics Expert",
@@ -28,7 +45,7 @@ export default function Work() {
       logo: "/millipore_logo.jpg",
       period: "August 2022 — April 2024",
       description:
-        "Builds and maintains the data infrastructure that keeps commercial teams informed, from source-of-truth datasets to dashboards and reporting. When ad-hoc needs arise - whether optimizing pricing, investigating claims, or supporting marketing - steps in to deliver the analysis that drives the decision.",
+        "As an Analytics Expert on the pricing and commercial analytics team, I built and maintained the data infrastructure, datasets, reports, and dashboards, that kept business teams informed and decision-ready. Beyond steady-state operations, I took ownership of high-impact initiatives to improve accuracy and operations within the pricing organization. My work consistently moved from analysis to action — delivering tools and insights that became central to how teams operate.",
       skills: [
         "Data Analysis",
         "Dashboarding",
@@ -37,7 +54,7 @@ export default function Work() {
         "Stakeholder Communication"
       ],
       takeaway:
-        "Biggest learning was from cross-cultural team across continents - I was part of the Global Pricing team and had to work closely with reprentatives from all markets where the business operates, including USA, Germany, China, Brazil, Canada, India."
+        "Built the tools teams rely on and led the projects that made them better. Frequent collaboration with diverse teams functionally, and locationally."
     },
     {
       role: "Digital Strategy & Analytics",
@@ -53,7 +70,7 @@ export default function Work() {
         "Analytics"
       ],
       takeaway:
-        "Realized the power of sofisticated technical processes when I got to update a monthly process from manual entry on Excel to topic handling with Python."
+        "From sentiment modeling to chatbot strategy - connected the voice of the member to decisions that defined the digital product direction."
     },
     {
       role: "Go-To-Market Strategy Consultant",
@@ -61,7 +78,7 @@ export default function Work() {
       logo: "",
       period: "September 2021 - December 2021",
       description:
-        "Developed a go-to-market strategy grounded in market research, competitive analysis, and internal data - covering brand positioning, outreach, and surveys. The work helped position the client for a successful soft launch and capital investment.",
+        "In this early-career role, I developed a full go-to-market strategy for a client from the ground up - spanning market research, competitive analysis, brand positioning, outreach, and survey design. By synthesizing internal data with external market intelligence, I delivered recommendations that directly supported the client's soft launch and helped secure capital investment. More than the deliverables, this role shaped how I think about strategy: that the best analysis means nothing without clear communication and tight alignment between insight and execution.",
       skills: [
         "Client Management",
         "Marketing Strategy",
@@ -69,7 +86,7 @@ export default function Work() {
         "Business Development"
       ],
       takeaway:
-        "This role built my foundation in understanding people, communication, and the importance of aligning strategy with execution."
+        "Built a go-to-market strategy that contributed to a successful soft launch and capital investment — grounded in research, competitive analysis, and a clear strategic narrative."
     },
     {
       role: "Management Executive",
@@ -77,7 +94,7 @@ export default function Work() {
       logo: "/aeon_logo.jpg",
       period: "September 2018 - July 2021",
       description:
-        "Served as a central connector across teams, vendors, and high-profile external partners - from government officials to Google and Intel - keeping projects aligned and moving. Led marketing efforts, managed client onboarding, and coordinated cross-functional launches that improved delivery and client satisfaction.",
+        "In this role, I operated at the intersection of the management, vendors, developers, clients, and high-profile external partners including government officials, Google India, and Intel US. I led marketing initiatives and major exhibition participation, managed end-to-end client onboarding, and coordinated cross-functional teams to launch new services and streamline operations. The scope demanded equal parts relationship management and execution discipline, and the results showed: faster delivery cycles, stronger client satisfaction, and a seat at the table in strategic negotiations with some of the biggest names in tech. This role built my foundation in understanding people, communication, and the importance of aligning strategy with execution.",
       skills: [
         "Client Management",
         "Marketing Strategy",
@@ -85,7 +102,23 @@ export default function Work() {
         "Leadership"
       ],
       takeaway:
-        "This role built my foundation in understanding people, communication, and the importance of aligning strategy with execution."
+        "Working through the startup's rise and fall gave me something no classroom could — a front-row seat to the realities of leadership, strategy, and what it truly takes to build something that lasts."
+    },
+    {
+      role: "Global Network Operations Center Engineer",
+      company: "Reliance Globalcom Ltd.",
+      logo: "/reliance.png",
+      period: "January 2017 - June 2017",
+      description:
+        "This internship dropped me into one of India's largest telecom infrastructures — rotating across Network Support, Transmission, Subsea, IP, and Cloud teams at Reliance. I configured Cisco and Juniper routers, worked with protocols like MPLS, VPN, and P2P, and contributed to projects spanning internet data centers and cable landing stations. Coming from a Computer Science background, networking was new territory — and I embraced it through self-study, team collaboration, and hands-on exposure to technologies I'd never encountered before. The highlight was visiting Reliance's Internet Data Center and Cable Landing Station firsthand — seeing at scale how the internet physically works.",
+      skills: [
+        "Computer Networking",
+        "Transmission Protocols",
+        "Cloud Connectivity",
+        "Cisco & Juniper"
+      ],
+      takeaway:
+        "Hands-on across Reliance's telecom stack — from router configuration to subsea cable stations — and proof that a steep learning curve is just an opportunity in disguise."
     }
   ];
 
@@ -94,7 +127,7 @@ export default function Work() {
       name: "Project Mentor",
       title: "Organization",
       company: "sayhii.io",
-      preview: "Dr. John Handley was my mentor when I was working as a Consultant and acted as a liason between me and the client.",
+      preview: "Dr. Handley was my mentor when I was developing strategic recommendations for sayhii.io.",
       link: "/ms_project.pdf"
     },
     {
@@ -108,14 +141,14 @@ export default function Work() {
       name: "Manager",
       title: "Organization",
       company: "Aeon",
-      preview: "Mr.Ravi was my manager and the Chief Technology Officer (CTO) when I was working at Aeon Communication.",
+      preview: "Mr.Ravi was my manager and the Chief Technology Officer at Aeon.",
       link: "/LOR_Aeon.pdf"
     },
     {
       name: "Human Resource Partner",
       title: "Organization",
       company: "Aeon",
-      preview: "Mr.Rajesh was the Senior HR Manager overseeing all hiring, and people development activities.",
+      preview: "Mr.Rajesh was the Senior HR Manager overseeing hiring, talent development, and annual performance evaluations.",
       link: "/LOR_Aeon_HR.pdf"
     }
   ];
@@ -135,7 +168,7 @@ export default function Work() {
         </span>
 
         <span className="px-4 py-2 bg-gray-100 rounded-full">
-          Business Analytics, Data Presentation & Strategy Alignment
+          Business Analytics
         </span>
 
         <span className="px-4 py-2 bg-gray-100 rounded-full">

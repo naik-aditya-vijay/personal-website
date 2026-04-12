@@ -79,12 +79,11 @@ export default function Home() {
           </p>
 
           <p className="text-gray-500">
-            Academically, I’m pursuing a Doctorate in Business Administration (National Louis University), 
-            alongside a Master’s in Business Analytics (University of Rochester, 2022) and a Bachelor’s in Computer Science (Symbiosis International University, 2018).
+            Academically, my background spans Computer Science (B.Tech., Symbiosis International University, 2018), Business Analytics (M.S., University of Rochester, 2022), and I'm currently a Doctoral candidate in Business Administration at National Louis University.
           </p>
 
           <p className="text-gray-500">
-            Personally, I’m driven by three things — meeting people, sports and overthinking.
+            Personally, I’m driven by three things: meeting people, sports and overthinking.
           </p>
 
           <p className="text-gray-500">
