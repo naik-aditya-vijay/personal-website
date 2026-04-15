@@ -26,7 +26,25 @@ const activities: Activity[] = [
     description:
       "Creating meaningful interactions by bringing together students from different educational backgrounds for shared learning.",
     images: ["/event11.jpg","/event12.jpg","/event13.jpg","/event14.jpg","/event15.jpg","/event16.jpg","/event17.jpg"],
-  }
+  },
+  {
+    title: "Blood Donation: The Drive That Gave Life",
+    description:
+      "Bringing people together around something that costs nothing but means everything. Every unit collected was a life within reach.",
+    images: ["/bd1.jpg","/bd2.jpg","/bd3.jpg","/bd4.jpg"],
+  },
+  {
+    title: "A Meal, A Moment, A Memory",
+    description:
+      "Organized food distribution for those who needed it most; just the belief that nobody should go hungry while we have the means to help. Simple work. Real impact.",
+    images: ["/food1.jpg","/food2.jpg","/food3.jpg","/food4.jpg"],
+  },
+  {
+    title: "Breathe. Move. Connect",
+    description:
+      "Yoga has a way of meeting you exactly where you are. Organizing a virtual Yoga event was about creating a moment for people to pause and just breathe. In a world that rarely slows down, an hour of stillness felt like a quiet act of resistance.",
+    images: ["/yoga1.jpg"],
+  },
 ];
 
 function ImageSlider({ images }: { images: string[] }) {

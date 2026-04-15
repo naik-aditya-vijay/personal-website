@@ -81,7 +81,7 @@ export default function BlogPost() {
     {
       type: "paragraph",
       text: "Keep dreaming, keep believing — now say it like you mean it!"
-    },
+    }
 
     
   ];
