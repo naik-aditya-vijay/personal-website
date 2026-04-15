@@ -8,6 +8,14 @@ export default function Thoughts() {
     {
       type: "Blog",
       tag: "Blog",
+      title: "The Room Knows Nothing About You - Until You Speak",
+      description:
+        "Competency v/s Confidence",
+      link: "/personal/thoughts/blog/compvsconf"
+    },
+    {
+      type: "Blog",
+      tag: "Blog",
       title: "Rekindling Our Dreams: Breaking Through the Limitations of Adulthood",
       description:
         "What chaged when you grew up?",

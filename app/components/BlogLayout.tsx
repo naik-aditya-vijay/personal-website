@@ -28,7 +28,7 @@ export default function BlogLayout({
 
       {/* Author */}
       <p className="text-gray-500 mb-12">
-        Published by {author}
+        Published on {author}
       </p>
 
       {/* Content */}
