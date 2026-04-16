@@ -87,6 +87,16 @@ export default function Thoughts() {
 
   const resources = [
     {
+      type: "Video",
+      title: "How to Claim Your Leadership Power? | Michael Timms | TED",
+      link: "https://www.youtube.com/watch?v=dIYmzf21d1g"
+    },
+    {
+      type: "Video",
+      title: "Rockefeller: The First Confirmed Billinoare",
+      link: "https://www.youtube.com/watch?v=sMH8WchxQR8"
+    },
+    {
       type: "Article",
       title: "Understand Candlestick Charts for Stock Trading",
       link: "https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/learning-center/Idenitfying-Chart-Patterns.pdf"
