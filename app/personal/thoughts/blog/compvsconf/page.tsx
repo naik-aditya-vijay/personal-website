@@ -89,7 +89,7 @@ export default function BlogPost() {
   return (
     <BlogLayout
       title="The Room Knows Nothing About You - Until You Speak"
-      author="April 14, 2026"
+      author="March 14, 2026"
       content={content}
     />
   );

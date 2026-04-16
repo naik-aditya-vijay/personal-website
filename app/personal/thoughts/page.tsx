@@ -41,6 +41,11 @@ export default function Thoughts() {
 
   const blogs = [
     {
+      title: "Am I Stupid to be Happy?",
+      description: "On finding stillness in the middle of the storm",
+      link: "/personal/thoughts/blog/finding-happiness"
+    },
+    {
       title: "The Room Knows Nothing About You - Until You Speak",
       description: "Competency v/s Confidence",
       link: "/personal/thoughts/blog/compvsconf"
@@ -104,7 +109,7 @@ export default function Thoughts() {
       {/* NAVIGATION FILTERS */}
       <div className="flex justify-center gap-6 mb-16 text-sm text-gray-600">
         <button onClick={() => scrollTo(blogRef)} className="hover:text-black">
-          Writing
+          Blogs
         </button>
         <button onClick={() => scrollTo(quoteRef)} className="hover:text-black">
           Quotes
@@ -117,7 +122,7 @@ export default function Thoughts() {
       {/* BLOGS */}
       <section ref={blogRef} className="mb-20">
         <h2 className="text-2xl font-semibold mb-8">
-          Writing
+          Blogs
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8">
