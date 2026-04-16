@@ -1,189 +1,199 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 export default function Thoughts() {
 
-  const items = [
+  const blogRef = useRef<HTMLDivElement>(null);
+  const quoteRef = useRef<HTMLDivElement>(null);
+  const resourceRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const [isPaused, setIsPaused] = useState(false);
+
+  const scrollTo = (ref: any) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // MARQUEE EFFECT
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    let animationFrame: any;
+
+    const scroll = () => {
+      if (!isPaused) {
+        container.scrollLeft += 0.3; // speed (lower = slower)
+
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          container.scrollLeft = 0;
+        }
+      }
+      animationFrame = requestAnimationFrame(scroll);
+    };
+
+    scroll();
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [isPaused]);
+
+  const blogs = [
     {
-      type: "Blog",
-      tag: "Blog",
       title: "The Room Knows Nothing About You - Until You Speak",
-      description:
-        "Competency v/s Confidence",
+      description: "Competency v/s Confidence",
       link: "/personal/thoughts/blog/compvsconf"
     },
     {
-      type: "Blog",
-      tag: "Blog",
       title: "Rekindling Our Dreams: Breaking Through the Limitations of Adulthood",
-      description:
-        "What chaged when you grew up?",
+      description: "What changed when you grew up?",
       link: "/personal/thoughts/blog/frugality"
     },
     {
-      type: "Blog",
-      tag: "Blog",
       title: "Diactonomy of the middle",
-      description:
-        "",
+      description: "",
       link: "/personal/thoughts/blog/diactonomy"
     },
     {
-      type: "Quote",
-      tag: "Quote",
-      title: "Expectancy determines outcomes!",
-      description:
-        ""
-    },
-    {
-      type: "Blog",
-      tag: "Blog",
       title: "It's late, I'm overthinking, and here we are!",
-      description:
-        "",
       link: "/personal/thoughts/blog/late_overthinking"
     },
     {
-      type: "Quote",
-      tag: "Quote",
-      title: "The magic you are looking for is in the work you are avoiding.",
-      description:
-        ""
-    },
-    {
-      type: "Blog",
-      tag: "Blog",
       title: "A Personal Reflection",
-      description:
-        "",
       link: "/personal/thoughts/blog/book_reflection"
     },
-    {
-      type: "Quote",
-      tag: "Quote",
-      title: "The harder I work, the luckier I get!",
-      description:
-        "Ray Kroc"
-    },
+  ];
+
+  const quotes = [
+    "Expectancy determines outcomes!",
+    "The magic you are looking for is in the work you are avoiding.",
+    "The harder I work, the luckier I get!",
+    "The antidote for overthinking is overdoing!",
+    "Motivation without actions brings self delusion.",
+    "You didn't come this far to only come this far.",
+    "Success is something you attract by the person you become.",
+    "Build, Don't Talk.",
+    "Aiming for the Quantum Leap.",
+    "Character is what you do on the third and fourth attempts.",
+    "A ssmooth sea never made a skilled sailor.",
+    "Success is getting what you want. Happiness is wanting what you get."
+  ];
+
+  const resources = [
     {
       type: "Article",
-      tag: "Article",
       title: "Understand Candlestick Charts for Stock Trading",
-      description:
-        "A basic introduction to understand how to read and predict trends.",
       link: "https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/learning-center/Idenitfying-Chart-Patterns.pdf"
     },
     {
-      type: "Quote",
-      tag: "Quote",
-      title: "The secret to success is found in daily routine.",
-      description:
-        ""
-    },
-    {
       type: "Video",
-      tag: "Video",
       title: "Naval Ravikant on Wealth Creation",
-      description:
-        "A talk about building wealth and thinking long-term.",
       link: "https://www.youtube.com/watch?v=6Mya4C3Yr7I"
-    },
-    {
-      type: "Quote",
-      tag: "Quote",
-      title: "The antidote for overthinking is overdoing!",
-      description:
-        ""
-    },
-    {
-      type: "Quote",
-      tag: "Quote",
-      title: "Motivation without actions brings self delusion.",
-      description:
-        ""
-    },
-    {
-      type: "Quote",
-      tag: "Quote",
-      title: "Success is not something you pursue. What you pursue will elude you. Success is something you attract by the person you become.",
-      description:
-        ""
     }
-    // {
-    //   type: "Idea",
-    //   tag: "Idea",
-    //   title: "Marketplace for Student Mentorship",
-    //   description:
-    //     "A platform where students can connect with professionals for short mentorship sessions.",
-    //   link: "/personal/thoughts/ideas/student-mentorship/"
-    // }
   ];
 
   return (
-    <main className="min-h-screen px-6 py-20 max-w-5xl mx-auto">
+    <main className="min-h-screen px-6 py-20 max-w-6xl mx-auto">
 
-      <h1 className="text-4xl font-bold text-center mb-16">
+      {/* TITLE */}
+      <h1 className="text-4xl font-bold text-center mb-10">
         Thoughts & Writing
       </h1>
 
-      <div className="space-y-10">
+      {/* NAVIGATION FILTERS */}
+      <div className="flex justify-center gap-6 mb-16 text-sm text-gray-600">
+        <button onClick={() => scrollTo(blogRef)} className="hover:text-black">
+          Writing
+        </button>
+        <button onClick={() => scrollTo(quoteRef)} className="hover:text-black">
+          Quotes
+        </button>
+        <button onClick={() => scrollTo(resourceRef)} className="hover:text-black">
+          Resources
+        </button>
+      </div>
 
-        {items.map((item, index) => {
+      {/* BLOGS */}
+      <section ref={blogRef} className="mb-20">
+        <h2 className="text-2xl font-semibold mb-8">
+          Writing
+        </h2>
 
-          const isExternal =
-            item.type === "Article" || item.type === "Video";
+        <div className="grid md:grid-cols-2 gap-8">
+          {blogs.map((blog, index) => (
+            <Link key={index} href={blog.link}>
+              <div className="p-8 border rounded-2xl hover:shadow-lg hover:-translate-y-1 transition cursor-pointer">
 
-          return (
+                <h3 className="text-xl font-semibold mb-3">
+                  {blog.title}
+                </h3>
 
+                {blog.description && (
+                  <p className="text-gray-600 mb-4">
+                    {blog.description}
+                  </p>
+                )}
+
+                <span className="text-sm text-blue-600 font-medium">
+                  Read →
+                </span>
+
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* QUOTES - MARQUEE */}
+      <section ref={quoteRef} className="mb-20">
+        <h2 className="text-2xl font-semibold mb-8">
+          Words Worth Remembering
+        </h2>
+
+        <div
+          ref={scrollRef}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          className="flex gap-6 overflow-hidden cursor-pointer"
+        >
+          {[...quotes, ...quotes].map((quote, index) => (
             <div
               key={index}
-              className="p-8 border rounded-xl hover:shadow-md transition"
+              className="min-w-[300px] p-6 border rounded-xl text-gray-700 italic"
             >
+              “{quote}”
+            </div>
+          ))}
+        </div>
+      </section>
 
-              {/* Tag */}
+      {/* RESOURCES */}
+      <section ref={resourceRef}>
+        <h2 className="text-2xl font-semibold mb-8">
+          External Resources
+        </h2>
+
+        <div className="space-y-4">
+          {resources.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-6 border rounded-xl hover:shadow-md transition"
+            >
               <span className="text-xs uppercase text-gray-500">
-                {item.tag}
+                {item.type}
               </span>
 
-              {/* Title */}
-              <h2 className="text-2xl font-semibold mt-2 mb-3">
+              <p className="text-lg font-medium mt-1">
                 {item.title}
-              </h2>
-
-              {/* Description */}
-              <p className="text-gray-600 mb-4">
-                {item.description}
               </p>
-
-              {/* Links */}
-
-              {item.link && !isExternal && (
-                <Link
-                  href={item.link}
-                  className="text-blue-600 text-sm font-medium hover:underline"
-                >
-                  Read →
-                </Link>
-              )}
-
-              {item.link && isExternal && (
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 text-sm font-medium hover:underline"
-                >
-                  Open →
-                </a>
-              )}
-
-            </div>
-
-          );
-        })}
-
-      </div>
+            </a>
+          ))}
+        </div>
+      </section>
 
     </main>
   );

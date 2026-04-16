@@ -21,7 +21,7 @@ export default function Personal() {
     },
     {
       title: "Photos",
-      desc: "Moments I don't want to forget",
+      desc: `The "I am an artist" section`,
       href: "/personal/photos",
     },
   ];

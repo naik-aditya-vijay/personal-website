@@ -75,7 +75,7 @@ export default function Photos() {
     <main className="min-h-screen px-6 py-20 max-w-7xl mx-auto">
 
       <h1 className="text-4xl font-bold text-center mb-16">
-        Moments That Matter
+        Timed to Perfection
       </h1>
 
       {/* Masonry layout */}
