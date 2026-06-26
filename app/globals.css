@@ -47,3 +47,15 @@ body {
   opacity: 0;
   animation: fadeIn 0.6s ease forwards;
 }
+
+/* Disable selection globally */
+body {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Prevent image dragging */
+img {
+  -webkit-user-drag: none;
+}

@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
+import { useEffect } from "react";
 
 export type ContentBlock =
   | { type: "paragraph"; text: string }
@@ -21,8 +24,30 @@ export default function BlogLayout({
   author,
   content,
 }: BlogLayoutProps) {
+
+  // 🔒 Block keyboard copy/select shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (
+        (e.ctrlKey || e.metaKey) &&
+        ["c", "x", "a"].includes(e.key.toLowerCase())
+      ) {
+        e.preventDefault();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   return (
-    <main className="min-h-screen px-6 py-20 max-w-3xl mx-auto">
+    <main
+      className="min-h-screen px-6 py-20 max-w-3xl mx-auto select-none hover:select-text"
+      onContextMenu={(e) => e.preventDefault()}
+      onCopy={(e) => e.preventDefault()}
+      onCut={(e) => e.preventDefault()}
+      onDragStart={(e) => e.preventDefault()}
+    >
 
       {/* HEADER */}
       <header className="mb-14">
@@ -40,17 +65,23 @@ export default function BlogLayout({
 
         {content.map((block, index) => {
 
-          // PARAGRAPH (Markdown enabled)
+          // PARAGRAPH
           if (block.type === "paragraph") {
             return (
-              <div key={index} className="leading-relaxed">
+              <div key={index}>
                 <ReactMarkdown
                   components={{
                     p: ({ children }) => <p className="mb-4">{children}</p>,
-                    strong: ({ children }) => <strong className="font-semibold text-black">{children}</strong>,
+                    strong: ({ children }) => (
+                      <strong className="font-semibold text-black">{children}</strong>
+                    ),
                     em: ({ children }) => <em className="italic">{children}</em>,
                     a: ({ children, href }) => (
-                      <a href={href as string} className="text-blue-600 underline">
+                      <a
+                        href={href as string}
+                        className="text-blue-600 underline"
+                        target="_blank"
+                      >
                         {children}
                       </a>
                     ),
@@ -74,7 +105,7 @@ export default function BlogLayout({
             );
           }
 
-          // QUOTE (more editorial + markdown support)
+          // QUOTE
           if (block.type === "quote") {
             return (
               <blockquote
@@ -86,7 +117,7 @@ export default function BlogLayout({
             );
           }
 
-          // HIGHLIGHT (key idea callout)
+          // HIGHLIGHT
           if (block.type === "highlight") {
             return (
               <div
@@ -107,15 +138,15 @@ export default function BlogLayout({
             );
           }
 
-          // LIST (bullets)
+          // LIST
           if (block.type === "list") {
             return (
-              <ul key={index} className="list-disc pl-6 space-y-2 text-gray-700">
+              <ul key={index} className="list-disc pl-6 space-y-2">
                 {block.items.map((item, i) => (
                   <li key={i}>
                     <ReactMarkdown
                       components={{
-                        p: ({ children }) => <span>{children}</span>
+                        p: ({ children }) => <span>{children}</span>,
                       }}
                     >
                       {item}
@@ -135,7 +166,9 @@ export default function BlogLayout({
                   alt={block.alt || "Blog image"}
                   width={900}
                   height={600}
-                  className="rounded-xl"
+                  draggable={false}
+                  onContextMenu={(e) => e.preventDefault()}
+                  className="rounded-xl pointer-events-none"
                 />
 
                 {block.caption && (
@@ -151,6 +184,9 @@ export default function BlogLayout({
         })}
 
       </article>
+      <footer className="mt-16 text-center text-sm text-gray-400">
+  © {new Date().getFullYear()} Aditya Naik — All rights reserved
+</footer>
     </main>
   );
 }

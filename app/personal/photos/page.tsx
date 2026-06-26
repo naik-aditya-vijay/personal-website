@@ -1,11 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Photos() {
-
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const photos = [
     { src: "/photo1.jpg", caption: "" },
@@ -101,20 +98,18 @@ export default function Photos() {
   ];
 
   return (
-    <main className="min-h-screen px-6 py-20 max-w-7xl mx-auto">
+    <main className="min-h-screen px-6 py-20 max-w-7xl mx-auto select-none">
 
       <h1 className="text-4xl font-bold text-center mb-16">
         Picture Perfect
       </h1>
-      
-      {/* Masonry layout */}
+
       <div className="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6">
 
         {photos.map((photo, index) => (
           <div
             key={index}
-            className="relative overflow-hidden rounded-xl cursor-pointer group break-inside-avoid animate-fadeIn"
-            onClick={() => setSelectedImage(photo.src)}
+            className="relative overflow-hidden rounded-xl group break-inside-avoid animate-fadeIn"
             style={{ animationDelay: `${index * 80}ms` }}
           >
 
@@ -124,10 +119,12 @@ export default function Photos() {
               width={500}
               height={700}
               loading="lazy"
-              className="rounded-xl object-cover w-full transition duration-500 group-hover:scale-110"
+              draggable={false}
+              onContextMenu={(e) => e.preventDefault()}
+              className="rounded-xl object-cover w-full transition duration-500 group-hover:scale-105 pointer-events-none"
             />
 
-            {/* Hover caption */}
+            {/* Optional caption */}
             <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm text-center p-3 opacity-0 group-hover:opacity-100 transition duration-300">
               {photo.caption}
             </div>
@@ -136,22 +133,6 @@ export default function Photos() {
         ))}
 
       </div>
-
-      {/* Lightbox */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-6"
-          onClick={() => setSelectedImage(null)}
-        >
-          <Image
-            src={selectedImage}
-            alt="selected"
-            width={1200}
-            height={900}
-            className="rounded-xl max-h-[90vh] w-auto"
-          />
-        </div>
-      )}
 
     </main>
   );
