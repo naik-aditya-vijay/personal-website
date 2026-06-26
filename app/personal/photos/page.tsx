@@ -69,15 +69,44 @@ export default function Photos() {
     { src: "/photo56.jpg", caption: "" },
     { src: "/photo57.jpg", caption: "" },
     { src: "/photo58.jpg", caption: "" },
+
+    { src: "/q1.jpeg", caption: "" },
+    { src: "/q2.jpeg", caption: "" },
+    { src: "/q3.jpeg", caption: "" },
+    { src: "/q4.jpeg", caption: "" },
+    { src: "/q5.jpeg", caption: "" },
+    { src: "/q6.jpeg", caption: "" },
+    { src: "/q7.jpeg", caption: "" },
+    { src: "/q8.jpeg", caption: "" },
+    { src: "/q9.jpeg", caption: "" },
+    { src: "/q10.jpeg", caption: "" },
+    { src: "/q11.jpeg", caption: "" },
+    { src: "/q12.jpeg", caption: "" },
+    { src: "/q13.jpeg", caption: "" },
+    { src: "/q14.jpeg", caption: "" },
+    { src: "/q15.jpeg", caption: "" },
+    { src: "/q16.jpeg", caption: "" },
+    { src: "/q17.jpeg", caption: "" },
+    { src: "/q18.jpeg", caption: "" },
+    { src: "/q19.jpeg", caption: "" },
+    { src: "/q20.jpeg", caption: "" },
+    { src: "/q21.jpeg", caption: "" },
+    { src: "/q22.jpeg", caption: "" },
+    { src: "/q23.jpeg", caption: "" },
+    { src: "/q24.jpeg", caption: "" },
+    { src: "/q25.jpeg", caption: "" },
+    { src: "/q26.jpeg", caption: "" },
+    { src: "/q29.jpeg", caption: "" },
+    { src: "/q30.jpeg", caption: "" },
   ];
 
   return (
     <main className="min-h-screen px-6 py-20 max-w-7xl mx-auto">
 
       <h1 className="text-4xl font-bold text-center mb-16">
-        Timed to Perfection
+        Picture Perfect
       </h1>
-
+      
       {/* Masonry layout */}
       <div className="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6">
 
