@@ -81,8 +81,13 @@ export default function Thoughts() {
     "Build, Don't Talk.",
     "Aiming for the Quantum Leap.",
     "Character is what you do on the third and fourth attempts.",
-    "A ssmooth sea never made a skilled sailor.",
-    "Success is getting what you want. Happiness is wanting what you get."
+    "A smooth sea never made a skilled sailor.",
+    "Success is getting what you want. Happiness is wanting what you get.",
+    "The grass is greener where you water it.",
+    "Life isn't about finding yourself. Life is about creating yourself.",
+    "Sometimes you need to distance yourself to see things clearly.",
+    "Don't make a decision until it is inevitable.",
+    "To be interesting, be interested."
   ];
 
   const resources = [
