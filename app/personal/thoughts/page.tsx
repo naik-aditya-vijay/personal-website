@@ -41,6 +41,11 @@ export default function Thoughts() {
 
   const blogs = [
     {
+      title: "Almost.",
+      description: "Leave a home to build a home.",
+      link: "/personal/thoughts/blog/almost"
+    },
+    {
       title: "Am I Stupid to be Happy?",
       description: "On finding stillness in the middle of the storm",
       link: "/personal/thoughts/blog/finding-happiness"
@@ -87,10 +92,18 @@ export default function Thoughts() {
     "Life isn't about finding yourself. Life is about creating yourself.",
     "Sometimes you need to distance yourself to see things clearly.",
     "Don't make a decision until it is inevitable.",
-    "To be interesting, be interested."
+    "To be interesting, be interested.",
+    "Only if thoughts could make you succeed. Act!",
+    "The struggle of life is between what you want and what you think you want.",
+    "People don’t choose the road not traveled because it’s sometimes a dead end."
   ];
 
   const resources = [
+    {
+      type: "Video",
+      title: "Mindset - Kunal Shah - Founder of Cred and CEO of WhatsApp",
+      link: "https://www.youtube.com/watch?v=YIszsqhLGIs"
+    },
     {
       type: "Video",
       title: "How to Claim Your Leadership Power? | Michael Timms | TED",
@@ -102,14 +115,14 @@ export default function Thoughts() {
       link: "https://www.youtube.com/watch?v=sMH8WchxQR8"
     },
     {
-      type: "Article",
-      title: "Understand Candlestick Charts for Stock Trading",
-      link: "https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/learning-center/Idenitfying-Chart-Patterns.pdf"
+      type: "Video",
+      title: "Articulate questions better.",
+      link: "https://www.youtube.com/watch?v=sJoI14-4YF8&t=37s"
     },
     {
       type: "Video",
-      title: "Naval Ravikant on Wealth Creation",
-      link: "https://www.youtube.com/watch?v=6Mya4C3Yr7I"
+      title: "Imagine life if you don't overthink everything - Naval Ravikant",
+      link: "https://www.youtube.com/watch?v=ugqVaSOfR5g&t=511s"
     }
   ];
 
