@@ -41,6 +41,11 @@ export default function Thoughts() {
 
   const blogs = [
     {
+      title: "The Pursuit of Happ(y)ness.",
+      description: "The first step toward attaining happiness is, perhaps, defining it.",
+      link: "/personal/thoughts/blog/happyness"
+    },
+    {
       title: "Almost.",
       description: "Leave a home to build a home.",
       link: "/personal/thoughts/blog/almost"
@@ -79,6 +84,8 @@ export default function Thoughts() {
     "Expectancy determines outcomes!",
     "The magic you are looking for is in the work you are avoiding.",
     "The harder I work, the luckier I get!",
+    "The first step toward attaining happiness is, perhaps, defining it.",
+    "Most rules are just conventional wisdom.",
     "The antidote for overthinking is overdoing!",
     "Motivation without actions brings self delusion.",
     "You didn't come this far to only come this far.",
